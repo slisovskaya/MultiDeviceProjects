@@ -3,7 +3,8 @@ unit pr2;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.TabControl, FMX.ScrollBox, FMX.Memo;
 
@@ -73,59 +74,59 @@ implementation
 
 procedure TForm1.Button12Click(Sender: TObject);
 begin
-   Label5.text:=(Sender as TButton).Text;
-if Sender = Button9 then
+  Label5.text := (Sender as TButton).text;
+  if Sender = Button9 then
     Memo1.Lines.Add('Вопрос №3 - правильно')
-else
-Memo1.Lines.Add('Вопрос №3 - неправильно')
+  else
+    Memo1.Lines.Add('Вопрос №3 - неправильно')
 end;
 
 procedure TForm1.Button16Click(Sender: TObject);
 begin
-Label7.Text:= (Sender as TButton).Text;
-if Sender = Button15 then
+  Label7.text := (Sender as TButton).text;
+  if Sender = Button15 then
     Memo1.Lines.Add('Вопрос №4 - правильно')
-else
-Memo1.Lines.Add('Вопрос №4 - неправильно')
+  else
+    Memo1.Lines.Add('Вопрос №4 - неправильно')
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-Label2.Text:= (Sender as TButton).Text;
-    if Sender = Button3 then
+  Label2.text := (Sender as TButton).text;
+  if Sender = Button3 then
     Memo1.Lines.Add('Вопрос №1 - правильно')
-else
-Memo1.Lines.Add('Вопрос №1 - неправильно')
+  else
+    Memo1.Lines.Add('Вопрос №1 - неправильно')
 
 end;
+
 procedure TForm1.Button8Click(Sender: TObject);
 begin
-Label3.Text:=(Sender as TButton).Text;
-if Sender = Button7 then
+  Label3.text := (Sender as TButton).text;
+  if Sender = Button7 then
     Memo1.Lines.Add('Вопрос №2 - правильно')
-else
-Memo1.Lines.Add('Вопрос №2 - неправильно')
+  else
+    Memo1.Lines.Add('Вопрос №2 - неправильно')
 end;
 
 procedure TForm1.SpeedButton1Click(Sender: TObject);
 begin
-TabControl1.ActiveTab:= TabItem1;
+  TabControl1.ActiveTab := TabItem1;
 end;
 
 procedure TForm1.SpeedButton2Click(Sender: TObject);
 begin
-      TabControl1.ActiveTab:= TabItem3;
+  TabControl1.ActiveTab := TabItem3;
 end;
 
 procedure TForm1.SpeedButton3Click(Sender: TObject);
 begin
-TabControl1.ActiveTab:= TabItem4;
+  TabControl1.ActiveTab := TabItem4;
 end;
 
 procedure TForm1.SpeedButton4Click(Sender: TObject);
 begin
-TabControl1.ActiveTab:= TabItem5;
+  TabControl1.ActiveTab := TabItem5;
 end;
 
 end.
-
