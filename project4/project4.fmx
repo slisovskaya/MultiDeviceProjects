@@ -1,0 +1,105 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 335
+  ClientWidth = 521
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Viewport3D1: TViewport3D
+    Color = claBlack
+    Size.Width = 545.000000000000000000
+    Size.Height = 289.000000000000000000
+    Size.PlatformDefault = False
+    object Light1: TLight
+      Color = claWhite
+      LightType = Directional
+      SpotCutOff = 180.000000000000000000
+      Position.Z = -8.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+    object LightMaterialSource1: TLightMaterialSource
+      Diffuse = claDarkgreen
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 296
+      Top = 135
+    end
+    object LightMaterialSource2: TLightMaterialSource
+      Diffuse = claNavy
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 328
+      Top = 216
+    end
+    object Sphere1: TSphere
+      RotationAngle.Y = 30.000000000000000000
+      Width = 10.000000000000000000
+      Height = 10.000000000000000000
+      Depth = 10.000000000000000000
+      Opacity = 0.899999976158142100
+      SubdivisionsAxes = 32
+      SubdivisionsHeight = 24
+      MaterialSource = LightMaterialSource1
+      Quanternion = '(0,-0.25433212518692,0,-0.967115521430969)'
+      object Sphere2: TSphere
+        Position.X = 4.000000000000000000
+        Position.Y = 4.000000000000000000
+        Width = 6.000000000000000000
+        Height = 6.000000000000000000
+        Depth = 6.000000000000000000
+        SubdivisionsAxes = 36
+        SubdivisionsHeight = 24
+        MaterialSource = LightMaterialSource2
+      end
+      object Sphere3: TSphere
+        Position.X = -4.000000000000000000
+        Position.Y = 4.000000000000000000
+        Width = 6.000000000000000000
+        Height = 6.000000000000000000
+        Depth = 6.000000000000000000
+        SubdivisionsAxes = 36
+        SubdivisionsHeight = 24
+        MaterialSource = LightMaterialSource2
+        object ListView1: TListView
+          ItemAppearanceClassName = 'TListItemAppearance'
+          ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Position.X = 67.000000000000000000
+          Position.Y = 81.000000000000000000
+        end
+      end
+      object FloatAnimation1: TFloatAnimation
+        Enabled = True
+        Duration = 5.000000000000000000
+        Loop = True
+        PropertyName = 'RotationAngle.Y'
+        StartValue = 0.000000000000000000
+        StopValue = 360.000000000000000000
+      end
+    end
+    object SpeedButton1: TSpeedButton
+      Position.X = 40.000000000000000000
+      Position.Y = 304.000000000000000000
+      StyleLookup = 'stepperbuttonleft'
+      Text = 'SpeedButton1'
+      OnClick = SpeedButton1Click
+    end
+  end
+  object SpeedButton2: TSpeedButton
+    Position.X = 120.000000000000000000
+    Position.Y = 304.000000000000000000
+    StyleLookup = 'stepperbuttonright'
+    Text = 'SpeedButton2'
+    OnClick = SpeedButton2Click
+  end
+end
